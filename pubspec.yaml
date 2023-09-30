@@ -34,26 +34,19 @@ dependencies:
   url_launcher: ^6.1.14
   webview_flutter: ^4.2.4
   cached_network_image: ^3.3.0
-  shimmer: ^3.0.0
-  
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-    
-  flutter_native_splash: ^2.3.2
+
   flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter_native_splash:
-  color: "#071b5d"
-  image: assets/images/wiki.png
-  android: true
-  ios: true
-  
+
 flutter:
   uses-material-design: true
 
@@ -61,3 +54,9 @@ flutter:
   assets:
     - assets/images/
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_icons:
+  image_path: "assets/images/wiki_logo.png" 
+  android: true
+  ios: true
+  # optionally, as transparency is not allowed on app store
+  remove_alpha_ios: true  

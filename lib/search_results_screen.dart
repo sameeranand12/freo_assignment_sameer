@@ -26,17 +26,16 @@ class _SearchResultsScreenState extends State<SearchResultsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Provider.of<SearchResultsModel>(context).fetchResults("dhoni");
     searchResults = Provider.of<SearchResultsModel>(context).results;
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Color(0xff447FF5),
           title: TextField(
             controller: searchController,
-            decoration: InputDecoration(
-              hintText: 'Search',
-              hintStyle: TextStyle(color: Colors.white),
+            decoration: const InputDecoration(
+              labelText: "Search",
+              labelStyle: TextStyle(color: Colors.white),
             ),
             style: TextStyle(color: Colors.white),
           ),

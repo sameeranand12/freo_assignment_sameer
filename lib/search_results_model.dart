@@ -22,9 +22,8 @@ class SearchResultsModel extends ChangeNotifier {
 
   Future<List<SearchResult>> fetchResults(String query) async {
     var baseUrl = 'https://en.wikipedia.org';
-    // https://en.wikipedia.org//w/api.php?action=query&format=json&prop=pageimages%7Cpageterms&generator=prefixsearch&redirects=1&formatversion=2&piprop=thumbnail&pithumbsize=50&pilimit=10&wbptterms=description&gpssearch=Sachin+T&gpslimit=10
     var headers = {
-      'Cache-Control': 'max-age=3600', // Cache for 1 hour
+      'Cache-Control': 'max-age=3600',
     };
 
     final response = await http.get(
@@ -53,7 +52,7 @@ class SearchResultsModel extends ChangeNotifier {
       }).toList();
 
       notifyListeners();
-      return _results; //
+      return _results; 
     } else {
       throw Exception('Failed to load results');
     }
