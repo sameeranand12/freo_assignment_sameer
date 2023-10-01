@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freo/search_results_model.dart';
-import 'package:freo/search_results_screen.dart';
+import 'package:freo/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       home: ChangeNotifierProvider(
         create: (context) => SearchResultsModel(),
-        child: SearchResultsScreen(),
+        child: HomeScreen(),
       ),
     );
   }
